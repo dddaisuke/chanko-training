@@ -9,6 +9,11 @@ module ManaboCampaignUnit
     function(:pages_for_campaign) do
       @pages = '置き換える文章'
     end
+
+    function(:show) do
+      @page = 'キャンペーン時にしか表示されない'
+      render :show
+    end
   end
 
   # ## active_if
