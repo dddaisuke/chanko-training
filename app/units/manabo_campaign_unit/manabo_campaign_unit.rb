@@ -1,6 +1,16 @@
 module ManaboCampaignUnit
   include Chanko::Unit
 
+  active_if do |context, options|
+    true
+  end
+
+  scope(:controller) do
+    function(:pages_for_campaign) do
+      @pages = '置き換える文章'
+    end
+  end
+
   # ## active_if
   # This block is used to decide if this unit is active or not.
   # `context` is the receiver object of `invoke`.
